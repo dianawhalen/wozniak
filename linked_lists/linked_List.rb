@@ -7,7 +7,7 @@ class LinkedList
   end
 
   def push(value)
-    @head = Node.new(value) if @head.nil?
+    return @head = Node.new(value) if @head.nil?
 
     tail = find_tail
     tail.next = Node.new(value)
