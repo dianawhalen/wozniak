@@ -1,7 +1,7 @@
 # Real World Example for Web history. Since its a singly linked list it can only go forward, not backwards.
 
 class WebHistory
-  attr_reader :current_page, :head
+  attr_reader :current_page, :head, :a_url
 
   def initialize(val)
     @head = Page.new(val, nil)
@@ -15,14 +15,14 @@ class WebHistory
     @current_page = current.next = Page.new(val, nil)
   end
 
-  def return_history
+  def show_history
     elements = []
     current = @head
     while current.next != nil
-      elements << current
+      elements << current.a_url
       current = current.next
     end
-    elements << current
+    elements << current.a_url
   end
 end
 
