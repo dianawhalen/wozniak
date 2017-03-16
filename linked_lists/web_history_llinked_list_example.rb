@@ -15,19 +15,19 @@ class WebHistory
     @current_page = current.next = Page.new(val, nil)
   end
 
-  def return_history
+  def show_history
     elements = []
     current = @head
     while current.next != nil
-      elements << current
+      elements << current.a_url
       current = current.next
     end
-    elements << current
+    elements << current.a_url
   end
 end
 
 class Page
-  attr_accessor :url, :next
+  attr_accessor :a_url, :next
 
   def initialize(url, next_page)
     @a_url = url
