@@ -1,4 +1,4 @@
-# Real World Example
+# Real World Example for Web history. Since its a singly linked list it can only go forward, not backwards.
 
 class WebHistory
   attr_reader :current_page, :head
